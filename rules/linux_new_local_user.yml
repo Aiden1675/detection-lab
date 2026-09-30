@@ -1,0 +1,24 @@
+title: New Local User Account Created
+id: 5b1f0c2e-8a47-4d3b-9e61-2c7a4f1d9b03
+status: experimental
+description: Detects creation of a local user account via useradd, excluding system accounts created by package installs.
+references:
+  - https://attack.mitre.org/techniques/T1136/001/
+author: Aiden1675
+date: 2026/09/30
+tags:
+  - attack.persistence
+  - attack.t1136.001
+logsource:
+  product: linux
+  service: auth
+detection:
+  keywords:
+    - 'useradd*new user: name='
+  filter_system_account:
+    - 'from=none'
+    - 'shell=/usr/sbin/nologin'
+  condition: keywords and not filter_system_account
+falsepositives:
+  - Administrators creating accounts during normal provisioning
+level: medium
