@@ -1,0 +1,36 @@
+{
+  "name": "Detection Lab coverage",
+  "versions": {
+    "attack": "17",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques with a detection that passes replay tests against captured logs.",
+  "sorting": 3,
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#2e7d32"
+    ],
+    "minValue": 0,
+    "maxValue": 1
+  },
+  "techniques": [
+    {
+      "techniqueID": "T1098",
+      "score": 1,
+      "comment": "User Added to Privileged Group (Wazuh rule 100102), verified by log replay"
+    },
+    {
+      "techniqueID": "T1136.001",
+      "score": 1,
+      "comment": "New Local User Account Created (Wazuh rule 100100), verified by log replay"
+    },
+    {
+      "techniqueID": "T1548.003",
+      "score": 1,
+      "comment": "Interactive Root Shell via Sudo (Wazuh rule 100101), verified by log replay"
+    }
+  ]
+}
