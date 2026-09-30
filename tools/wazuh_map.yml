@@ -1,0 +1,12 @@
+# Sigma rule id -> Wazuh settings.
+# wazuh_id: custom rule id. if_sid: the built-in Wazuh rule that already
+# matches this log. program: program name removed from the patterns,
+# because Wazuh strips it from the log body before matching.
+5b1f0c2e-8a47-4d3b-9e61-2c7a4f1d9b03:
+  wazuh_id: 100100
+  if_sid: 5902
+  program: useradd
+a3c9d5e7-1f28-4b6a-8d40-7e2b9c6f1a58:
+  wazuh_id: 100101
+  if_sid: 5402
+  program: sudo
