@@ -6,8 +6,11 @@ rules:
     attack: [attack_useradd]
   a3c9d5e7-1f28-4b6a-8d40-7e2b9c6f1a58:
     attack: [attack_root_shell, attack_su_dash]
+  c7e4a2b9-3d15-4f86-a0c1-9b5e7d2f4a61:
+    attack: [attack_usermod_sudo]
 benign:
   - benign_useradd_system
+  - benign_usermod_video
   - benign_apt_simulate
   - benign_systemctl
   - benign_ls_root
