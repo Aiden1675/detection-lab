@@ -1,0 +1,24 @@
+title: Interactive Root Shell via Sudo
+id: a3c9d5e7-1f28-4b6a-8d40-7e2b9c6f1a58
+status: experimental
+description: Detects a user opening an interactive root shell through sudo (bash or su -), a common step after initial access.
+references:
+  - https://attack.mitre.org/techniques/T1548/003/
+author: Aiden1675
+date: 2026/09/30
+tags:
+  - attack.privilege_escalation
+  - attack.t1548.003
+logsource:
+  product: linux
+  service: auth
+detection:
+  keywords:
+    - 'sudo*COMMAND=/bin/bash'
+    - 'sudo*COMMAND=/usr/bin/bash'
+    - 'sudo*COMMAND=/usr/bin/su -'
+    - 'sudo*COMMAND=/bin/su -'
+  condition: keywords
+falsepositives:
+  - Administrators legitimately opening a root shell with sudo -i
+level: medium
