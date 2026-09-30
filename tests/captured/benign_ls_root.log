@@ -1,0 +1,5 @@
+2026-09-30T20:13:26.540588+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-09-30T20:13:26.549152+00:00 Analyst-stack-lab sudo: vboxuser : TTY=tty1 ; PWD=/home/vboxuser/detection-lab ; USER=root ; COMMAND=/usr/bin/ls /root
+2026-09-30T20:13:26.550156+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2026-09-30T20:13:26.555880+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-09-30T20:13:28.581806+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)

@@ -1,0 +1,7 @@
+2026-09-30T20:13:12.429415+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-09-30T20:13:12.439169+00:00 Analyst-stack-lab sudo: vboxuser : TTY=tty1 ; PWD=/home/vboxuser/detection-lab ; USER=root ; COMMAND=/usr/sbin/useradd -m -s /bin/bash svc_backup
+2026-09-30T20:13:12.439563+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2026-09-30T20:13:12.463750+00:00 Analyst-stack-lab useradd[10996]: new group: name=svc_backup, GID=1002
+2026-09-30T20:13:12.464648+00:00 Analyst-stack-lab useradd[10996]: new user: name=svc_backup, UID=1002, GID=1002, home=/home/svc_backup, shell=/bin/bash, from=/dev/pts/0
+2026-09-30T20:13:12.501413+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-09-30T20:13:14.520028+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
