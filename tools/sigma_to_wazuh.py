@@ -3,7 +3,8 @@
 Handles the same subset as sigma_lite: keyword blocks joined by
 `and` / `and not`. Each Sigma rule needs an entry in tools/wazuh_map.yml.
 The whole condition becomes one PCRE2 regex built with lookaheads, so each
-Wazuh rule needs only a single <regex> tag.
+Wazuh rule needs only a single <regex> tag. A rule with an if_sid hangs off
+that built-in rule; a rule without one matches on the program name.
 
 Run from the repo root:  python3 -m tools.sigma_to_wazuh
 """
@@ -60,7 +61,14 @@ def build_rule(rule, meta):
     lines = [
         f"  <!-- sigma: {rule['id']} ({rule['_file']}) -->",
         f'  <rule id="{meta["wazuh_id"]}" level="{LEVELS[rule["level"]]}">',
-        f'    <if_sid>{meta["if_sid"]}</if_sid>',
+    ]
+    if meta.get("if_sid"):
+        lines.append(f'    <if_sid>{meta["if_sid"]}</if_sid>')
+    else:
+        lines.append(
+            f'    <program_name>{escape(meta["program"])}</program_name>'
+        )
+    lines += [
         f'    <regex type="pcre2">{pattern}</regex>',
         f'    <description>{escape(rule["title"])}</description>',
     ]
@@ -97,6 +105,10 @@ def main():
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(render())
     print(f"wrote {OUT.relative_to(ROOT)}")
+
+
+if __name__ == "__main__":
+    main()
 
 
 if __name__ == "__main__":
