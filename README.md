@@ -42,7 +42,7 @@ Run on a single Ubuntu lab VM with Wazuh 4.14:
 - **Live run:** creating a user, opening a root shell, and adding a user to the sudo group on the VM each produced an alert. The 100100 alert carried `T1136.001` and the Persistence tactic.
 - **Finding:** Wazuh reports the first time a user runs a sudo command as rule 5403 and repeats as 5402, both children of 5400. A custom rule parented on only one of them can miss events, so the sudo rule lists both.
 - **Sudo-group detection:** Wazuh has no built-in rule for `usermod` group changes, so this rule matches on the program name. It fires on adding a user to `sudo` and stays silent on adding one to `video`, in both `wazuh-logtest` and a live run.
-- ![ATT&CK Navigator layer](docs/navigator.png)
+- 
 
 ## Limitations and next steps
 
