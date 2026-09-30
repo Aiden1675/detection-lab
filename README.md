@@ -1,5 +1,7 @@
 # Detection Lab
 
+![tests](https://github.com/Aiden1675/detection-lab/actions/workflows/ci.yml/badge.svg)
+
 Detection-as-code for a Wazuh home lab: Sigma rules tested by replaying real attack logs, converted to Wazuh rules, and verified firing in a live Wazuh instance.
 
 **Status:** work in progress. Two detections so far.
@@ -45,7 +47,8 @@ Run on a single Ubuntu lab VM with Wazuh 4.14:
 - `sigma_lite.py` and the converter handle a small Sigma subset (keyword lists joined by `and` / `and not`), not full Sigma. Replacing them with pySigma is a next step.
 - The sudo rule matches any `sudo bash`, including legitimate admin shells (`sudo -i`). Expect false positives in real use.
 - The attack captures come from commands run by the scenario script, not from real adversary tooling.
-- Not yet built: a measured ATT&CK coverage report, more detections, and CI.
+- CI runs the log-replay tests only. The live Wazuh check is done by hand on the lab VM.
+- Not yet built: a measured ATT&CK coverage report and more detections.
 
 ## Safety
 
