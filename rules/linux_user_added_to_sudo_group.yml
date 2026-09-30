@@ -1,0 +1,24 @@
+title: User Added to Privileged Group
+id: c7e4a2b9-3d15-4f86-a0c1-9b5e7d2f4a61
+status: experimental
+description: Detects a user being added to the sudo, admin, or wheel group with usermod, which grants administrator rights.
+references:
+  - https://attack.mitre.org/techniques/T1098/
+author: Aiden1675
+date: 2026/09/30
+tags:
+  - attack.persistence
+  - attack.privilege_escalation
+  - attack.t1098
+logsource:
+  product: linux
+  service: auth
+detection:
+  keywords:
+    - "usermod*to group 'sudo'"
+    - "usermod*to group 'admin'"
+    - "usermod*to group 'wheel'"
+  condition: keywords
+falsepositives:
+  - Administrators legitimately granting sudo rights during provisioning
+level: high
