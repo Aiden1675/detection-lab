@@ -26,10 +26,12 @@ capture() {
 
 # Attacks
 capture attack_useradd 'sudo useradd -m -s /bin/bash svc_backup'
+capture attack_usermod_sudo 'sudo usermod -aG sudo svc_backup'
 capture attack_root_shell 'echo exit | sudo bash'
 capture attack_su_dash 'echo exit | sudo su -'
 
 # Benign activity the rules must stay quiet on
+capture benign_usermod_video 'sudo usermod -aG video svc_backup'
 capture benign_useradd_system 'sudo useradd -r -s /usr/sbin/nologin svc_probe'
 capture benign_apt_simulate 'sudo apt-get -s upgrade'
 capture benign_systemctl 'sudo systemctl status ssh --no-pager'
