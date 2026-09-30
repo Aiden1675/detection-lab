@@ -14,4 +14,11 @@
     <description>Interactive Root Shell via Sudo</description>
     <mitre><id>T1548.003</id></mitre>
   </rule>
+  <!-- sigma: c7e4a2b9-3d15-4f86-a0c1-9b5e7d2f4a61 (linux_user_added_to_sudo_group.yml) -->
+  <rule id="100102" level="10">
+    <program_name>usermod</program_name>
+    <regex type="pcre2">(?i)^(?=.*(?:to\ group\ 'sudo'|to\ group\ 'admin'|to\ group\ 'wheel'))</regex>
+    <description>User Added to Privileged Group</description>
+    <mitre><id>T1098</id></mitre>
+  </rule>
 </group>

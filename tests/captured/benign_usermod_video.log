@@ -1,0 +1,7 @@
+2026-09-30T21:18:53.453105+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-09-30T21:18:53.461323+00:00 Analyst-stack-lab sudo: vboxuser : TTY=tty1 ; PWD=/home/vboxuser/detection-lab ; USER=root ; COMMAND=/usr/sbin/usermod -aG video svc_backup
+2026-09-30T21:18:53.462200+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2026-09-30T21:18:53.475697+00:00 Analyst-stack-lab usermod[17332]: add 'svc_backup' to group 'video'
+2026-09-30T21:18:53.475913+00:00 Analyst-stack-lab usermod[17332]: add 'svc_backup' to shadow group 'video'
+2026-09-30T21:18:53.491377+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-09-30T21:18:55.504221+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
