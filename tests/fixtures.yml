@@ -1,0 +1,16 @@
+# Synthetic lines in Ubuntu auth.log format. Phase 2 replaces the attack
+# lines with logs captured from real simulated attacks.
+5b1f0c2e-8a47-4d3b-9e61-2c7a4f1d9b03:
+  attack:
+    - "2026-09-30T14:50:01.123456+00:00 lab useradd[2345]: new user: name=svc_backup, UID=1002, GID=1002, home=/home/svc_backup, shell=/bin/bash, from=/dev/pts/0"
+    - "2026-09-30T14:52:10.654321+00:00 lab useradd[2410]: new user: name=support, UID=1003, GID=1003, home=/home/support, shell=/bin/sh, from=/dev/pts/1"
+  benign:
+    - "2026-09-30T09:00:03.111111+00:00 lab useradd[812]: new user: name=systemd-coredump, UID=999, GID=999, home=/, shell=/usr/sbin/nologin, from=none"
+    - "2026-09-30T09:01:15.222222+00:00 lab sshd[900]: Accepted publickey for vboxuser from 192.168.56.1 port 50122 ssh2"
+a3c9d5e7-1f28-4b6a-8d40-7e2b9c6f1a58:
+  attack:
+    - "2026-09-30T15:10:44.000001+00:00 lab sudo:  vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/bin/bash"
+    - "2026-09-30T15:11:02.000002+00:00 lab sudo:  vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/su -"
+  benign:
+    - "2026-09-30T15:12:30.000003+00:00 lab sudo:  vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/apt update"
+    - "2026-09-30T15:13:05.000004+00:00 lab sudo:  vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/systemctl status ssh"
