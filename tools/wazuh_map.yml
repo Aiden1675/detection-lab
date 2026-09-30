@@ -1,6 +1,7 @@
 # Sigma rule id -> Wazuh settings.
 # wazuh_id: custom rule id. if_sid: the built-in Wazuh rules this rule
-# hangs off (comma-separated). program: program name removed from the
+# hangs off (comma-separated). If if_sid is left out, the rule matches on
+# the program name instead. program: program name removed from the
 # patterns, because Wazuh strips it from the log body before matching.
 # The sudo rule lists 5402 and 5403 because both are children of 5400:
 # Wazuh reports the first time a user runs a sudo command as 5403 and
@@ -13,3 +14,6 @@ a3c9d5e7-1f28-4b6a-8d40-7e2b9c6f1a58:
   wazuh_id: 100101
   if_sid: "5402,5403"
   program: sudo
+c7e4a2b9-3d15-4f86-a0c1-9b5e7d2f4a61:
+  wazuh_id: 100102
+  program: usermod
