@@ -1,0 +1,8 @@
+2026-10-01T01:46:26.479530+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-10-01T01:46:26.489048+00:00 Analyst-stack-lab sudo: vboxuser : TTY=tty1 ; PWD=/home/vboxuser/detection-lab ; USER=root ; COMMAND=/usr/sbin/userdel -r svc_del
+2026-10-01T01:46:26.489319+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2026-10-01T01:46:26.521287+00:00 Analyst-stack-lab userdel[26754]: delete user 'svc_del'
+2026-10-01T01:46:26.521996+00:00 Analyst-stack-lab userdel[26754]: removed group 'svc_del' owned by 'svc_del'
+2026-10-01T01:46:26.522159+00:00 Analyst-stack-lab userdel[26754]: removed shadow group 'svc_del' owned by 'svc_del'
+2026-10-01T01:46:26.557428+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-10-01T01:46:28.569096+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)

@@ -1,7 +1,7 @@
-2026-09-30T21:18:55.525014+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
-2026-09-30T21:18:55.534796+00:00 Analyst-stack-lab sudo: vboxuser : TTY=tty1 ; PWD=/home/vboxuser/detection-lab ; USER=root ; COMMAND=/usr/sbin/useradd -r -s /usr/sbin/nologin svc_probe
-2026-09-30T21:18:55.536052+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
-2026-09-30T21:18:55.552539+00:00 Analyst-stack-lab useradd[17377]: new group: name=svc_probe, GID=986
-2026-09-30T21:18:55.552796+00:00 Analyst-stack-lab useradd[17377]: new user: name=svc_probe, UID=996, GID=986, home=/home/svc_probe, shell=/usr/sbin/nologin, from=/dev/pts/0
-2026-09-30T21:18:55.579192+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
-2026-09-30T21:18:57.587696+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2026-10-01T01:46:30.660836+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-10-01T01:46:30.669931+00:00 Analyst-stack-lab sudo: vboxuser : TTY=tty1 ; PWD=/home/vboxuser/detection-lab ; USER=root ; COMMAND=/usr/sbin/useradd -r -s /usr/sbin/nologin svc_probe
+2026-10-01T01:46:30.670436+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2026-10-01T01:46:30.684102+00:00 Analyst-stack-lab useradd[26839]: new group: name=svc_probe, GID=986
+2026-10-01T01:46:30.684233+00:00 Analyst-stack-lab useradd[26839]: new user: name=svc_probe, UID=996, GID=986, home=/home/svc_probe, shell=/usr/sbin/nologin, from=/dev/pts/0
+2026-10-01T01:46:30.710270+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-10-01T01:46:32.721594+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)

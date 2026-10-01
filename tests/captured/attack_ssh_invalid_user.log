@@ -1,0 +1,4 @@
+2026-10-01T01:46:16.841715+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-10-01T01:46:16.969263+00:00 Analyst-stack-lab sshd[26614]: Invalid user nosuchuser from 127.0.0.1 port 55658
+2026-10-01T01:46:16.980744+00:00 Analyst-stack-lab sshd[26614]: Connection closed by invalid user nosuchuser 127.0.0.1 port 55658 [preauth]
+2026-10-01T01:46:18.998112+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)

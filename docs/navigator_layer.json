@@ -20,17 +20,27 @@
     {
       "techniqueID": "T1098",
       "score": 1,
-      "comment": "User Added to Privileged Group (Wazuh rule 100102), verified by log replay"
+      "comment": "User Added to Privileged Group (Wazuh rule 115103), verified by log replay"
+    },
+    {
+      "techniqueID": "T1110.001",
+      "score": 1,
+      "comment": "SSH Login Attempt for Non-Existent User (Wazuh rule 115104); Repeated Failed Sudo Password Attempts (Wazuh rule 115105), verified by log replay"
     },
     {
       "techniqueID": "T1136.001",
       "score": 1,
-      "comment": "New Local User Account Created (Wazuh rule 100100), verified by log replay"
+      "comment": "New Local User Account Created (Wazuh rule 115101), verified by log replay"
+    },
+    {
+      "techniqueID": "T1531",
+      "score": 1,
+      "comment": "Local User Account Deleted (Wazuh rule 115106), verified by log replay"
     },
     {
       "techniqueID": "T1548.003",
       "score": 1,
-      "comment": "Interactive Root Shell via Sudo (Wazuh rule 100101), verified by log replay"
+      "comment": "Interactive Root Shell via Sudo (Wazuh rule 115102), verified by log replay"
     }
   ]
 }

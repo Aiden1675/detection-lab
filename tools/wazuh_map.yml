@@ -7,25 +7,25 @@
 # Wazuh reports the first time a user runs a sudo command as 5403 and
 # repeats as 5402.
 5b1f0c2e-8a47-4d3b-9e61-2c7a4f1d9b03:
-  wazuh_id: 100100
+  wazuh_id: 115101
   if_sid: "5902"
   program: useradd
 a3c9d5e7-1f28-4b6a-8d40-7e2b9c6f1a58:
-  wazuh_id: 100101
+  wazuh_id: 115102
   if_sid: "5402,5403"
   program: sudo
 c7e4a2b9-3d15-4f86-a0c1-9b5e7d2f4a61:
-  wazuh_id: 100102
+  wazuh_id: 115103
   program: usermod
 d4a1b8c3-6e27-4c95-b3f0-8a2d5e7c1f94:
-  wazuh_id: 100103
+  wazuh_id: 115104
   if_sid: "5710"
   program: sshd
 e9b3c7a5-2f84-4d16-9a0e-6c1d8b4f2a73:
-  wazuh_id: 100104
+  wazuh_id: 115105
   if_sid: "5401"
   program: sudo
 f2c6d9e8-7a31-4b58-8e04-3d9a5c7b1e62:
-  wazuh_id: 100105
+  wazuh_id: 115106
   if_sid: "5903"
   program: userdel

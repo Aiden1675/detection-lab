@@ -6,10 +6,13 @@ A rule is verified only if it fires on every captured attack scenario and on no 
 
 | Technique | Tactic | Rule | Wazuh id | Verified |
 |-----------|--------|------|----------|----------|
-| T1136.001 | Persistence | `linux_new_local_user.yml` | 100100 | yes |
-| T1548.003 | Privilege Escalation | `linux_sudo_root_shell.yml` | 100101 | yes |
-| T1098 | Persistence, Privilege Escalation | `linux_user_added_to_sudo_group.yml` | 100102 | yes |
+| T1136.001 | Persistence | `linux_new_local_user.yml` | 115101 | yes |
+| T1110.001 | Credential Access | `linux_ssh_invalid_user.yml` | 115104 | yes |
+| T1110.001 | Credential Access | `linux_sudo_repeated_failures.yml` | 115105 | yes |
+| T1548.003 | Privilege Escalation | `linux_sudo_root_shell.yml` | 115102 | yes |
+| T1098 | Persistence, Privilege Escalation | `linux_user_added_to_sudo_group.yml` | 115103 | yes |
+| T1531 | Impact | `linux_user_deleted.yml` | 115106 | yes |
 
-Verified techniques: 3 (T1098, T1136.001, T1548.003)
+Verified techniques: 5 (T1098, T1110.001, T1136.001, T1531, T1548.003)
 
 Coverage means tested against captures from one lab VM, for the exact commands in `tools/run_scenarios.sh`. It says nothing about other ways to perform the same technique.

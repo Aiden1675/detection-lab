@@ -1,7 +1,7 @@
-2026-09-30T21:18:47.067341+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
-2026-09-30T21:18:47.076602+00:00 Analyst-stack-lab sudo: vboxuser : TTY=tty1 ; PWD=/home/vboxuser/detection-lab ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo svc_backup
-2026-09-30T21:18:47.077670+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
-2026-09-30T21:18:47.093776+00:00 Analyst-stack-lab usermod[17211]: add 'svc_backup' to group 'sudo'
-2026-09-30T21:18:47.094232+00:00 Analyst-stack-lab usermod[17211]: add 'svc_backup' to shadow group 'sudo'
-2026-09-30T21:18:47.107438+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
-2026-09-30T21:18:49.153115+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2026-10-01T01:46:10.596619+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-10-01T01:46:10.607415+00:00 Analyst-stack-lab sudo: vboxuser : TTY=tty1 ; PWD=/home/vboxuser/detection-lab ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo svc_backup
+2026-10-01T01:46:10.608650+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2026-10-01T01:46:10.622852+00:00 Analyst-stack-lab usermod[26484]: add 'svc_backup' to group 'sudo'
+2026-10-01T01:46:10.623327+00:00 Analyst-stack-lab usermod[26484]: add 'svc_backup' to shadow group 'sudo'
+2026-10-01T01:46:10.635455+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-10-01T01:46:12.651788+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)

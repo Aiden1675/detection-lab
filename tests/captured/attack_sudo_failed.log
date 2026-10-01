@@ -1,0 +1,4 @@
+2026-10-01T01:46:19.015932+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-10-01T01:46:19.027848+00:00 Analyst-stack-lab sudo: pam_unix(sudo:auth): authentication failure; logname=vboxuser uid=1000 euid=0 tty=/dev/tty1 ruser=vboxuser rhost=  user=vboxuser
+2026-10-01T01:46:24.439581+00:00 Analyst-stack-lab sudo: vboxuser : 3 incorrect password attempts ; TTY=tty1 ; PWD=/home/vboxuser/detection-lab ; USER=root ; COMMAND=/usr/bin/true
+2026-10-01T01:46:26.456741+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)

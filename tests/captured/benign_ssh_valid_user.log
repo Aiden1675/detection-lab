@@ -1,0 +1,10 @@
+2026-10-01T01:46:32.742839+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session closed for user root
+2026-10-01T01:46:32.933417+00:00 Analyst-stack-lab sshd[26877]: Accepted publickey for vboxuser from 127.0.0.1 port 52616 ssh2: ED25519 SHA256:ILezt/CDWxuQooFAJu5eTsd8ArhHame2SrfDOr4mMsA
+2026-10-01T01:46:32.937179+00:00 Analyst-stack-lab sshd[26877]: pam_unix(sshd:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2026-10-01T01:46:32.953950+00:00 Analyst-stack-lab systemd-logind[748]: New session 50 of user vboxuser.
+2026-10-01T01:46:33.444981+00:00 Analyst-stack-lab sshd[26963]: Received disconnect from 127.0.0.1 port 52616:11: disconnected by user
+2026-10-01T01:46:33.445256+00:00 Analyst-stack-lab sshd[26963]: Disconnected from user vboxuser 127.0.0.1 port 52616
+2026-10-01T01:46:33.445584+00:00 Analyst-stack-lab sshd[26877]: pam_unix(sshd:session): session closed for user vboxuser
+2026-10-01T01:46:33.449586+00:00 Analyst-stack-lab systemd-logind[748]: Session 50 logged out. Waiting for processes to exit.
+2026-10-01T01:46:33.451193+00:00 Analyst-stack-lab systemd-logind[748]: Removed session 50.
+2026-10-01T01:46:35.454088+00:00 Analyst-stack-lab sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
