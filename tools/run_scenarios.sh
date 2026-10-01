@@ -8,7 +8,7 @@ mkdir -p tests/captured
 LOG=/var/log/auth.log
 R=""
 [ -r "$LOG" ] || R="sudo"
-SSH="ssh -o BatchMode=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+SSH="ssh -p 2200 -o BatchMode=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 
 sudo -v
 sudo userdel -r svc_backup 2>/dev/null
@@ -33,7 +33,7 @@ capture attack_usermod_sudo 'sudo usermod -aG sudo svc_backup'
 capture attack_root_shell 'echo exit | sudo bash'
 capture attack_su_dash 'echo exit | sudo su -'
 capture attack_ssh_invalid_user "$SSH nosuchuser@127.0.0.1 true"
-capture attack_sudo_failed 'echo wrongpass | sudo -S -k true'
+capture attack_sudo_failed "printf 'a\nb\nc\n' | sudo -S -k true"
 capture attack_userdel 'sudo userdel -r svc_del'
 
 # Benign activity the rules must stay quiet on
@@ -43,6 +43,7 @@ capture benign_ssh_valid_user "$SSH vboxuser@127.0.0.1 true"
 capture benign_apt_simulate 'sudo apt-get -s upgrade'
 capture benign_systemctl 'sudo systemctl status ssh --no-pager'
 capture benign_ls_root 'sudo ls /root'
+capture benign_sudo_one_wrong 'echo wrongpass | sudo -S -k true'
 
 sudo userdel -r svc_backup 2>/dev/null
 sudo userdel -r svc_del 2>/dev/null
