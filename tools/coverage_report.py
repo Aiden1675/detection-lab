@@ -89,20 +89,23 @@ def render_markdown():
     ]
     return "\n".join(lines) + "\n"
 
-
 def render_layer():
-    techniques = []
+    by_technique = {}
     for r in rows():
         if not r["verified"]:
             continue
         for t in r["techniques"]:
-            techniques.append({
-                "techniqueID": t,
-                "score": 1,
-                "comment": f"{r['title']} (Wazuh rule {r['wazuh_id']}), "
-                           "verified by log replay",
-            })
-    techniques.sort(key=lambda x: x["techniqueID"])
+            by_technique.setdefault(t, []).append(
+                f"{r['title']} (Wazuh rule {r['wazuh_id']})"
+            )
+    techniques = [
+        {
+            "techniqueID": t,
+            "score": 1,
+            "comment": "; ".join(names) + ", verified by log replay",
+        }
+        for t, names in sorted(by_technique.items())
+    ]
     layer = {
         "name": "Detection Lab coverage",
         "versions": {"attack": "17", "navigator": "5.1.0", "layer": "4.5"},
@@ -115,6 +118,7 @@ def render_layer():
         "techniques": techniques,
     }
     return json.dumps(layer, indent=2) + "\n"
+
 
 
 def main():
