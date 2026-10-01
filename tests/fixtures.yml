@@ -8,9 +8,17 @@ rules:
     attack: [attack_root_shell, attack_su_dash]
   c7e4a2b9-3d15-4f86-a0c1-9b5e7d2f4a61:
     attack: [attack_usermod_sudo]
+  d4a1b8c3-6e27-4c95-b3f0-8a2d5e7c1f94:
+    attack: [attack_ssh_invalid_user]
+  e9b3c7a5-2f84-4d16-9a0e-6c1d8b4f2a73:
+    attack: [attack_sudo_failed]
+  f2c6d9e8-7a31-4b58-8e04-3d9a5c7b1e62:
+    attack: [attack_userdel]
 benign:
   - benign_useradd_system
   - benign_usermod_video
+  - benign_ssh_valid_user
+  - benign_sudo_one_wrong
   - benign_apt_simulate
   - benign_systemctl
   - benign_ls_root
