@@ -1,0 +1,21 @@
+title: Repeated Failed Sudo Password Attempts
+id: e9b3c7a5-2f84-4d16-9a0e-6c1d8b4f2a73
+status: experimental
+description: Detects two or more incorrect sudo passwords in one invocation, a sign of password guessing by someone with a shell on the host. A single typo logs "attempt" and does not match.
+references:
+  - https://attack.mitre.org/techniques/T1110/001/
+author: Aiden1675
+date: 2026/10/01
+tags:
+  - attack.credential_access
+  - attack.t1110.001
+logsource:
+  product: linux
+  service: auth
+detection:
+  keywords:
+    - 'sudo*incorrect password attempts'
+  condition: keywords
+falsepositives:
+  - A user who repeatedly mistypes their password
+level: medium
