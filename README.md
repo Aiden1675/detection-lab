@@ -17,6 +17,8 @@ Detection-as-code for a Wazuh home lab: Sigma rules tested by replaying real att
 | Repeated failed sudo passwords | T1110.001 | 115105 | 5401 |
 | User account deleted (`userdel`) | T1531 | 115106 | 5903 |
 
+![ATT&CK Navigator layer](docs/navigator.png)
+
 ## Components
 
 | File | What it does |
