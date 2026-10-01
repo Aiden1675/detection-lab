@@ -1,0 +1,21 @@
+title: Local User Account Deleted
+id: f2c6d9e8-7a31-4b58-8e04-3d9a5c7b1e62
+status: experimental
+description: Detects deletion of a local user account with userdel. Attackers may remove accounts to disrupt access or cover tracks.
+references:
+  - https://attack.mitre.org/techniques/T1531/
+author: Aiden1675
+date: 2026/10/01
+tags:
+  - attack.impact
+  - attack.t1531
+logsource:
+  product: linux
+  service: auth
+detection:
+  keywords:
+    - 'userdel*delete user'
+  condition: keywords
+falsepositives:
+  - Administrators removing accounts during offboarding
+level: medium
